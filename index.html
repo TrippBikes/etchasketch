@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETCH A SKETCH</title>
+    <script src = "etchasketch.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="gridContainer">
+        <h1 class="gridTitle">WELCOME TO ETCH A SKETCH</h1>
+        <div class="inputs">
+            <p class="colorPickerTitle">COLOR: </p>
+            <input type="color" id="colorPicker" name="colorPicker">
+            <div class='radioButts'>
+                <input type="radio" name="selector" class="selector" id="marker" checked>
+                <label for="marker">MARKER</label>
+                <input type="radio" name="selector" id="randBow" class="selector">
+                <label for="randBow">RAND-BOW</label>
+                <input type="radio" name="selector" id="eraser" class="selector">
+                <label for="eraser">ERASER</label>
+                <button id='clearer' class='button'>CLEAR</button>
+            </div>
+
+        </div>
+        <div id='sizeInput'>
+            <output id="gridLayout">Grid Layout:</output>
+            <input type="range" min="2" max="64" value="32" id="sizeBySize" class="sizeBySize" oninput="this.previousElementSibling.value = `Grid Layout: ${this.value} x ${this.value}`">
+        </div>
+    </div>
+</body>
+</html>
